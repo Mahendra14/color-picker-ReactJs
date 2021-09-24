@@ -28,7 +28,9 @@ function App() {
 
   </section>
   <section className="colors">
-    Colors will show up here!
+   {list.map((color,index)=>{
+   return <SingleColor key={index} {...color} index={index} />
+   })}
   </section>
   </>);
 }
