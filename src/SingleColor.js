@@ -7,6 +7,14 @@ const SingleColor = ({rgb,weight,index, hexColor}) => {
   //one more way to chane the rgb other than using the hex directly from the library
   const hex = rgbToHex(...rgb);
   const hexValue = `#${hexColor}`;
+  useEffect(() => {
+    const timeout = setTimeout(()=>{
+      setAlert(false);
+    },3000)
+    return () => {
+      clearInterval(timeout);
+    }
+  }, [alert])
   return (
     <article className={`color`} style={{backgroundColor : `rgb(${bcg})`}}
     onClick = {() => {
