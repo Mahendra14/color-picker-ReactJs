@@ -19,6 +19,7 @@ const SingleColor = ({rgb,weight,index, hexColor}) => {
     <article className={`color`} style={{backgroundColor : `rgb(${bcg})`}}
     onClick = {() => {
       setAlert(true);
+      //to copy the text to clipboad
       navigator.clipboard.writeText(hexValue);
     }}
     >
